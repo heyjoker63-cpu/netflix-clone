@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix Clone</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #141414;
+            font-family: "Montserrat", sans-serif;
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            background-color: rgba(0,0,0,0.9);
+            padding: 15px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 120px;
+            margin-right: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #e50914;
+        }
+
+        /* BANNER */
+        .banner {
+            height: 90vh;
+            background: linear-gradient(to top, #141414 10%, transparent 60%),
+                        url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .banner-content {
+            max-width: 500px;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .banner-buttons button {
+            padding: 10px 25px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .btn-play {
+            background-color: white;
+            color: black;
+        }
+
+        .btn-info {
+            background-color: rgba(109,109,110,0.7);
+            color: white;
+        }
+
+        .banner-buttons button:hover {
+            opacity: 0.8;
+        }
+
+        /* SEÇÕES */
+        .section {
+            margin-top: 20px;
+            padding: 20px 40px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .movies {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .movies::-webkit-scrollbar {
+            display: none;
+        }
+
+        .movie {
+            min-width: 200px;
+            height: 120px;
+            margin-right: 10px;
+            background-color: #333;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .movie img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .movie:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #e50914;
+            font-weight: 600;
+        }
+
+        /* ESPAÇO HEADER */
+        .spacer {
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="menu">
+            <img src="Netflix_2015_logo.svg.png" class="logo" alt="Netflix">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">TV Shows</a>
+                <a href="#">Movies</a>
+                <a href="#">Recently Added</a>
+                <a href="#">My List</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Filme em Destaque</h1>
+            <p>
+                Um filme incrível, cheio de ação, drama e emoção.
+                Assista agora e descubra por que todos estão falando dele.
+            </p>
+            <div class="banner-buttons">
+                <button class="btn-play">▶ Play</button>
+                <button class="btn-info">ℹ More Info</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÕES -->
+    <section class="section">
+        <h2>Trending Now</h2>
+        <div class="movies">
+            <div class="movie"><img src="https://picsum.photos/300/200?1"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?2"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?3"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?4"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?5"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Top Rated</h2>
+        <div class="movies">
+            <div class="movie"><img src="https://picsum.photos/300/200?6"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?7"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?8"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?9"></div>
+            <div class="movie"><img src="https://picsum.photos/300/200?10"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        Feito por: <span>Adriano Sousa</span>
+    </footer>
+
+</body>
+</html>
+
